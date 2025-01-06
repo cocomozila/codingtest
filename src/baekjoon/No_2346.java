@@ -22,7 +22,6 @@ public class No_2346 {
 
         StringBuilder sb = new StringBuilder();
 
-        int count = 0;
         int order = 0;
         while (!deque.isEmpty()) {
             while (order != 0) {

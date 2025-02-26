@@ -10,26 +10,32 @@ public class No_1769 {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
-        int N = Integer.parseInt(br.readLine());
+        String s = br.readLine();
+        int count = 0;
 
-        if (N < 10) {
-            if (N % 3 == 0) {
-                sb.append(0).append("\n");
-                sb.append("YES");
-                return;
-            }
+        if (s.length() == 1) {
             sb.append(0).append("\n");
-            sb.append("NO");
+            sb.append(isDivisibleBy3(s) ? "YES" : "NO");
+            System.out.println(sb.toString());
             return;
         }
 
-        String s = String.valueOf(N);
-        int save = 0;
-        while (true) {
+        while (s.length() > 1) {
+            int sum = 0;
             for (int i = 0; i < s.length(); i++) {
-                save += s.charAt(i);
+                sum += s.charAt(i) - '0';
             }
+            s = String.valueOf(sum);
+            count++;
         }
 
+        sb.append(count).append("\n");
+        sb.append(isDivisibleBy3(s) ? "YES" : "NO");
+        System.out.println(sb.toString());
+    }
+
+    private static boolean isDivisibleBy3(String s) {
+        int num = Integer.parseInt(s);
+        return num % 3 == 0;
     }
 }

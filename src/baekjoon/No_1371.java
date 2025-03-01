@@ -24,7 +24,7 @@ public class No_1371 {
             }
         }
 
-        List<Character> list = new ArrayList<Character>();
+        List<Character> list = new ArrayList<>();
         int max = 0;
         for (int i = 0; i < alphabet.length; i++) {
             if (alphabet[i] > max) {
@@ -35,6 +35,11 @@ public class No_1371 {
                 list.add((char) (i + 'a'));
             }
         }
-        System.out.println(a);
+
+        for (char c : list) {
+            sb.append(c);
+        }
+
+        System.out.println(sb.toString());
     }
 }

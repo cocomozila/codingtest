@@ -5,10 +5,7 @@ import java.util.Arrays;
 public class lv2_숫자블록 {
 
     public static void main(String[] args) {
-        int[] solution = solution(1, 10);
-        for (int i = 0; i < solution.length; i++) {
-            System.out.print(solution[i] + " ");
-        }
+
     }
 
     public int[] solution(long begin, long end) {
